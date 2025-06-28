@@ -1,0 +1,21 @@
+{
+    "installation": [
+        {
+            "name": "Creating environment",
+            "env": "env",
+            "commands": [
+                "uv pip install PolUVR"
+            ]
+        }
+    ],
+    "start": [
+        {
+            "name": "Starting PolUVR",
+            "env": "env",
+            "catch": "7860",
+            "commands": [
+               "uvx --python 3.11 open-webui@latest serve"
+            ]
+        }
+    ]
+}
