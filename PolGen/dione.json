@@ -1,0 +1,34 @@
+{
+    "dependencies": {
+        "git": {
+            "version": "latest"
+        }
+    },
+    "installation": [
+        {
+            "name": "Cloning repository",
+            "commands": [
+                "git clone https://github.com/Politrees/PolGen.git PolGen"
+            ]
+        },
+        {
+            "name": "Running 'run-PolGen-installer.bat'",
+              "commands": [
+                { "command": "cd PolGen" },
+                { "platform": "windows", "command": "run-PolGen-installer.bat" },
+                { "platform": "linux", "command": "run-PolGen-installer.sh" }
+              ]
+        }
+    ],
+    "start": [
+        {
+            "name": "Running 'run-PolGen.bat'",
+            "catch": "4000",
+              "commands": [
+                { "command": "cd PolGen" },
+                { "platform": "windows", "command": "run-PolGen.bat" },
+                { "platform": "linux", "command": "run-PolGen.sh" }
+              ]
+        }
+    ]
+}
